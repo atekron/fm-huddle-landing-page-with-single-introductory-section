@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --primary-violet: hsl(257, 40%, 49%);
+  --primary-soft-magenta: hsl(300, 69%, 71%);
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--primary-violet);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  margin: auto;
+  padding: 1rem;
+  min-height: 375px;
+  max-width: 420px;
+  text-align: center;
+  height: 100%;
+  min-height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.logo img {
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+}
+
+.mockup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.mockup img {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+}
+
+section {
+  /* background-color: aqua; */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* header {
+  font-family: "Poppins", sans-serif;
+} */
+
+header h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+header p {
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+section button {
+  align-self: center;
+  width: 15rem;
+  padding: 0.8rem;
+  border: 0 solid transparent;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+  color: var(--primary-violet);
+  font-size: 1rem;
+  cursor: pointer;
+  outline-style: none;
+}
+
+section button:hover {
+  background-color: var(--primary-soft-magenta);
+  color: white;
+}
+
+.social {
+  justify-self: flex-end;
+  font-size: 1rem;
+  margin-top: auto;
+}
+
+.social a {
+  display: inline-flex;
+  border: 0.1rem solid white;
+  border-radius: 50%;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  fill: white;
+}
+
+.social a:hover {
+  border: 0.1rem solid var(--primary-soft-magenta);
+  fill: var(--primary-soft-magenta);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-image: url("/images/bg-mobile.svg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-image: url("/images/bg-desktop.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .container {
+    flex-direction: row;
+    max-width: 90%;
+    align-items: stretch;
+  }
+
+  .images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+  }
+
+  .logo {
+    justify-self: flex-start;
+  }
+
+  .logo img {
+    width: 30%;
+  }
+
+  .mockup {
+    margin: auto;
+  }
+
+  .mockup img {
+    width: 100%;
+  }
+
+  header {
+    text-align: left;
+    margin-top: auto;
+    margin-left: 3rem;
+  }
+
+  header h1 {
+    padding-right: 5rem;
+    font-size: 2.5rem;
+  }
+
+  section {
+    /* background-color: beige; */
+    /* padding: 0 3rem; */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section button {
+    margin-bottom: auto;
+    margin-left: 4rem;
+    align-self: flex-start;
+    width: 12rem;
+    padding: 1rem;
+  }
+
+  .social {
+    margin-top: 1rem;
+    align-self: flex-end;
+    justify-self: center;
+  }
+}
